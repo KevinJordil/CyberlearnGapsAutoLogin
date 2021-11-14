@@ -1,0 +1,26 @@
+{
+    "name":"Autologin",
+    "manifest_version": 2,
+    "version":"1",
+    "description":"AAI autologin",
+    "content_scripts": [
+        {
+            "matches": ["https://cyberlearn.hes-so.ch/*"],
+            "js": ["cyberloginaccess.js"],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["https://cyberlearn.hes-so.ch/login/index.php"],
+            "js": ["cyberlogin.js"],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["https://hes-so.login.eduid.ch/idp/profile/SAML2/Redirect/SSO*"],
+            "js": ["hessologin.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "tabs", "http://*/*"
+    ]
+}
