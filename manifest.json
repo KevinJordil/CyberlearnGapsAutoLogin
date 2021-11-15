@@ -2,10 +2,11 @@
     "name":"Autologin",
     "manifest_version": 2,
     "version":"1",
-    "description":"AAI autologin",
+    "description":"Cyberlearn with AAI autologin",
     "content_scripts": [
         {
             "matches": ["https://cyberlearn.hes-so.ch/*"],
+            "exclude_matches": ["https://cyberlearn.hes-so.ch/login/index.php"],
             "js": ["cyberloginaccess.js"],
             "run_at": "document_end"
         },
@@ -21,6 +22,6 @@
         }
     ],
     "permissions": [
-        "tabs", "http://*/*"
+        "tabs", "https://*/*"
     ]
 }
