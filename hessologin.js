@@ -1,5 +1,4 @@
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-sleep(500)
+document.getElementById("username").value = ""
+document.getElementById("password").value = ""
+
 document.getElementById("login-button").click()
