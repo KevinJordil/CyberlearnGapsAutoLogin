@@ -1,13 +1,13 @@
 # Cyberlearn Auto Login
 
-Extension Google Chrome qui permet de se logguer automatiquement sur Cyberlearn.
+Google Chrome extension that allows you to log in automatically to Cyberlearn.
 
 ## Installation
+Download the content of this repo
+Enter your edu-ID information in the hessologin.js file
 
-1. Télécharger le contenu de ce repo
-2. Inscrire vos informations d'identification edu-ID dans le fichier `hessologin.js`
 
-Dans Google Chrome
-1. Ouvrir [chrome://extensions/](chrome://extensions/)
-2. Activer le mode développeur en haut à droite
-3. Cliquer sur "Charger l'extension non empaquetée" et selectionner le dossier cloné
+In Google Chrome
+1. Open  [chrome://extensions/](chrome://extensions/)
+2. Activate the developer mode in the top right corner
+3. Click on "Load unpackaged extension" and select the cloned folder
