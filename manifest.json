@@ -1,31 +1,54 @@
 {
-    "name":"Cyberlearn Auto-login",
+    "name": "Cyberlearn Auto-login",
     "manifest_version": 3,
-    "version":"1",
-    "description":"Cyberlearn with AAI autologin",
+    "version": "1",
+    "description": "Cyberlearn with SWITCH edu-ID autologin",
     "icons": {
         "128": "icons/icon128.png"
     },
+    "action": {
+        "default_icon"  :   "icons/icon128.png",
+        "default_popup" :   "html/popup.html",
+        "default_title" :   "Cyberlearn Auto-login"
+    },/*
+    "background": {
+        "service_worker": "js/background.js"
+    },*/    
     "content_scripts": [
         {
-            "matches": ["https://cyberlearn.hes-so.ch/*"],
-            "exclude_matches": ["https://cyberlearn.hes-so.ch/login/index.php"],
-            "js": ["js/cyberloginaccess.js"],
+            "matches": [
+                "https://cyberlearn.hes-so.ch/*"
+            ],
+            "exclude_matches": [
+                "https://cyberlearn.hes-so.ch/login/index.php"
+            ],
+            "js": [
+                "js/cyberloginaccess.js"
+            ],
             "run_at": "document_end"
         },
         {
-            "matches": ["https://cyberlearn.hes-so.ch/login/index.php"],
-            "js": ["js/cyberlogin.js"],
+            "matches": [
+                "https://cyberlearn.hes-so.ch/login/index.php"
+            ],
+            "js": [
+                "js/cyberlogin.js"
+            ],
             "run_at": "document_end"
         },
         {
-            "matches": ["https://hes-so.login.eduid.ch/idp/profile/SAML2/Redirect/SSO*"],
-            "js": ["js/hessologin.js"],
+            "matches": [
+                "https://hes-so.login.eduid.ch/idp/profile/SAML2/Redirect/SSO*"
+            ],
+            "js": [
+                "js/hessologin.js"
+            ],
             "run_at": "document_end"
         }
     ],
     "permissions": [
-        "tabs"
+        "tabs",
+        "storage"
     ],
     "host_permissions": [
         "https://cyberlearn.hes-so.ch/*",
