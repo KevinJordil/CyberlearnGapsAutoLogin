@@ -1,23 +1,26 @@
 {
-    "name":"Autologin",
+    "name":"Cyberlearn Auto-login",
     "manifest_version": 3,
     "version":"1",
     "description":"Cyberlearn with AAI autologin",
+    "icons": {
+        "128": "icons/icon128.png"
+    },
     "content_scripts": [
         {
             "matches": ["https://cyberlearn.hes-so.ch/*"],
             "exclude_matches": ["https://cyberlearn.hes-so.ch/login/index.php"],
-            "js": ["cyberloginaccess.js"],
+            "js": ["js/cyberloginaccess.js"],
             "run_at": "document_end"
         },
         {
             "matches": ["https://cyberlearn.hes-so.ch/login/index.php"],
-            "js": ["cyberlogin.js"],
+            "js": ["js/cyberlogin.js"],
             "run_at": "document_end"
         },
         {
             "matches": ["https://hes-so.login.eduid.ch/idp/profile/SAML2/Redirect/SSO*"],
-            "js": ["hessologin.js"],
+            "js": ["js/hessologin.js"],
             "run_at": "document_end"
         }
     ],
