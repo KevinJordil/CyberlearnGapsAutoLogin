@@ -1,8 +1,15 @@
-# Cyberlearn Auto Login
+# Cyberlearn & Gaps Auto Login
 
-Google Chrome extension that allows you to log in automatically to Cyberlearn.
+Google Chrome extension that allows you to log in automatically to Cyberlearn and gaps.
 
 ## Installation
+
+### Chrome web store
+
+[Cyberlearn & Gaps Auto Login on Chrome web store](https://chrome.google.com/webstore/detail/cyberlearn-auto-login/gdhcahcipkhbkjebljcdjggpdaekhdlj)
+
+### Manual
+
 Download the content of this repo
 
 In Google Chrome
