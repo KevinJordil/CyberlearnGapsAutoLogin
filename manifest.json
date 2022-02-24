@@ -41,6 +41,15 @@
                 "js/hessologin.js"
             ],
             "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "https://gaps.heig-vd.ch/*"
+            ],
+            "js": [
+                "js/gapslogin.js"
+            ],
+            "run_at": "document_end"
         }
     ],
     "permissions": [
