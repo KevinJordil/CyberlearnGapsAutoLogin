@@ -9,6 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
             password.value = result.user.password
         } 
     })
+
+    document.addEventListener('keydown', function(e) {
+        if(e.key === 'Enter'){
+            save_button.click()
+        }
+    })
+
+
     save_button.addEventListener("click", function() {
 
         chrome.storage.sync.set({ 
