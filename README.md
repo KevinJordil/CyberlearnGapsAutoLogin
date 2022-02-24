@@ -17,4 +17,8 @@ In Google Chrome
 2. Activate the developer mode in the top right corner
 3. Click on "Load unpackaged extension" and select the cloned folder
 
-You can now define your SWITCH edu-id by clicking on the extension icon
+## Usage
+
+Click on the extension icon and enter your SWITCH edu-id login details.
+
+These login details are stored on via the synchronisation of your Google account or locally if you don't have a Google account.
