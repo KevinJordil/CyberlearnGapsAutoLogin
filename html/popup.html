@@ -1,31 +1,42 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="../css/bulma.0.9.3.min.css">
+    <link rel="stylesheet" href="../css/popup.css">
     <script src="../js/popup.js"></script>
+    <script src="../js/libs/fontawesome.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="box">
-            <h2 class="has-text-centered subtitle">SWITCH <span class="has-text-weight-semibold">edu-ID</span></h2>
-            <div class="field">
-                <label class="label">E-mail</label>
-                <div class="control">
-                    <input id="input-email" class="input" type="email" placeholder="E-mail">
-                </div>
+    <div id="main" class="container box">
+        <h2 class="has-text-centered subtitle">SWITCH <span class="has-text-weight-semibold">edu-ID</span></h2>
+        <label class="label has-text-weight-medium">E-mail</label>
+        <div class="field">
+
+            <div class="control has-icons-left">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                <input id="input-email" name="email" class="input" type="email" placeholder="prenom.nom@heig-vd.ch">
             </div>
-            <div class="field">
-                <label class="label">Password</label>
-                <div class="control">
-                    <input id="input-password" class="input" type="password" placeholder="Password">
-                </div>
-            </div>
-            <div class="field has-text-centered">
-                <button id="save_button" class="button is-link">Save</button>
+
+        </div>
+        <div class="field">
+            <label class="label has-text-weight-medium">Mot de passe</label>
+            <div class="control has-icons-left has-icons-right">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-solid fa-lock"></i>
+                </span>
+                <input id="input-password" name="password" class="input" type="password" placeholder="Mot de passe">
+                <span class="icon is-small is-right">
+                    <i id="show-password" class="fas fa-eye is-clickable"></i>
+                </span>
             </div>
         </div>
-
+        <div class="field has-text-centered mt-5">
+            <button id="save-button" class="button is-link is-outlined has-text-weight-medium">Sauver</button>
+        </div>
     </div>
 
 </body>
