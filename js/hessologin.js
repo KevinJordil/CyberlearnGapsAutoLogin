@@ -12,7 +12,7 @@ if(document.getElementById("username") != null){
             } 
         })
     } else { // Connection failed
-        error_message.innerHTML = "Les informations d'identification fournies dans l'extension sont erronées<br>Veuillez les mettre à jour et réssayer !"
+        error_message.innerHTML = "Les informations d'identification fournies dans l'extension sont erronées.<br>Veuillez les mettre à jour et réessayer !"
     }
 
 
