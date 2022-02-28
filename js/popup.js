@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    window.resizeBy(800, 600)
 
     let save_button = document.getElementById("save-button")
     let input_email = document.getElementById("input-email")
