@@ -5,10 +5,17 @@ if (document.getElementById("username") != null) {
     if (error_message === undefined) {
         chrome.storage.sync.get("user", function (result) {
             if (result.user !== undefined) {
-                document.getElementById("username").value = result.user.email
-                document.getElementById("password").value = result.user.password
+                if (document.getElementById("password") == null) { // First page with username only
+                    document.getElementById("username").value = result.user.email
+                    document.getElementById("login-button").click()
+                } else { // Second page with username and password
+                    document.getElementById("username").value = result.user.email
+                    document.getElementById("password").value = result.user.password
+                    document.getElementById("login-button").click()
+                }
 
-                document.getElementById("login-button").click()
+
+
             }
         })
     } else { // Connection failed

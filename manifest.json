@@ -1,23 +1,25 @@
 {
     "name": "Cyberlearn & Gaps Auto-login",
     "manifest_version": 3,
-    "version": "1.2",
+    "version": "1.3",
     "description": "Cyberlearn & Gaps with SWITCH edu-ID auto-login",
     "icons": {
         "128": "icon/icon128.png"
     },
     "action": {
-        "default_icon"  :   "icon/icon128.png",
-        "default_popup" :   "html/popup.html",
-        "default_title" :   "Cyberlearn & Gaps Auto-login"
+        "default_icon": "icon/icon128.png",
+        "default_popup": "html/popup.html",
+        "default_title": "Cyberlearn & Gaps Auto-login"
     },
     "content_scripts": [
         {
             "matches": [
-                "https://cyberlearn.hes-so.ch/*"
+                "https://cyberlearn.hes-so.ch/*",
+                "https://moodle.msengineering.ch/*"
             ],
             "exclude_matches": [
-                "https://cyberlearn.hes-so.ch/login/index.php"
+                "https://cyberlearn.hes-so.ch/login/index.php",
+                "https://moodle.msengineering.ch/login/index.php"
             ],
             "js": [
                 "js/cyberloginaccess.js"
@@ -26,7 +28,8 @@
         },
         {
             "matches": [
-                "https://cyberlearn.hes-so.ch/login/index.php"
+                "https://cyberlearn.hes-so.ch/login/index.php",
+                "https://moodle.msengineering.ch/login/index.php"
             ],
             "js": [
                 "js/cyberlogin.js"
@@ -44,7 +47,8 @@
         },
         {
             "matches": [
-                "https://gaps.heig-vd.ch/*"
+                "https://gaps.heig-vd.ch/*",
+                "https://mse.hes-so.ch/*"
             ],
             "js": [
                 "js/gapslogin.js"
@@ -56,6 +60,7 @@
         "storage"
     ],
     "host_permissions": [
+        "https://moodle.msengineering.ch/*",
         "https://cyberlearn.hes-so.ch/*",
         "https://hes-so.login.eduid.ch/*"
     ]
