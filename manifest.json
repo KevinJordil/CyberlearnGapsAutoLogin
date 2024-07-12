@@ -1,7 +1,7 @@
 {
     "name": "Cyberlearn & Gaps Auto-login",
     "manifest_version": 3,
-    "version": "1.3",
+    "version": "1.4",
     "description": "Cyberlearn & Gaps with SWITCH edu-ID auto-login",
     "icons": {
         "128": "icon/icon128.png"
